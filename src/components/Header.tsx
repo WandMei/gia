@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Bot, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import logoGia from '../assets/logo-gia.png';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,13 +18,12 @@ export default function Header() {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#002233]/90 backdrop-blur-md py-4 border-b border-[#00dbff]/10' : 'py-6 bg-transparent'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
-          <div className="w-10 h-10 bg-gradient-to-br from-[#00dbff] to-[#007799] rounded-xl flex items-center justify-center shadow-lg shadow-[#00dbff]/20">
-             <Bot className="w-6 h-6 text-[#002233]" />
-          </div>
-          <span className="text-2xl font-bold tracking-wide font-display text-white">
-            Gia<span className="text-[#00dbff]">.</span>
-          </span>
+        <div className="flex items-center">
+          <img
+            src={logoGia}
+            alt="Gia — Inteligência Artificial Imobiliária"
+            className="h-9 w-auto object-contain"
+          />
         </div>
 
         {/* Desktop Nav */}
