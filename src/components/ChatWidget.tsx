@@ -27,10 +27,15 @@ export default function ChatWidget() {
   ]);
   const [inputText, setInputText] = useState('');
   const [isTyping, setIsTyping] = useState(false);
+  const messagesContainerRef = useRef<HTMLDivElement>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
+  // Scroll only inside the chat container — never the page
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    const container = messagesContainerRef.current;
+    if (container) {
+      container.scrollTop = container.scrollHeight;
+    }
   };
 
   useEffect(() => {
@@ -61,17 +66,24 @@ export default function ChatWidget() {
         throw new Error(`Webhook returned status ${response.status}`);
       }
 
-      // Expects the n8n agent to return: { "output": "reply text" }
-      // or a plain string body — handles both gracefully.
+      // Handles n8n AI Agent response formats:
+      //   - Array:  [{ output: "..." }]  (most common from AI Agent node)
+      //   - Object: { output: "..." } or { text: "..." } or { message: "..." }
+      //   - Plain text body
       let botReply = 'Não entendi sua solicitação. Por favor, tente novamente.';
       const contentType = response.headers.get('content-type') ?? '';
 
       if (contentType.includes('application/json')) {
         const data = await response.json();
-        // n8n AI Agent typically returns { output: '...' }
-        botReply = data?.output ?? data?.text ?? data?.message ?? JSON.stringify(data);
+        // n8n AI Agent node returns an array: [{ output: "..." }]
+        if (Array.isArray(data) && data.length > 0) {
+          const first = data[0];
+          botReply = first?.output ?? first?.text ?? first?.message ?? JSON.stringify(first);
+        } else {
+          botReply = data?.output ?? data?.text ?? data?.message ?? JSON.stringify(data);
+        }
       } else {
-        botReply = await response.text();
+        botReply = (await response.text()).trim() || botReply;
       }
       // ───────────────────────────────────────────────────────────────────────
 
@@ -137,7 +149,7 @@ export default function ChatWidget() {
             </div>
 
             {/* Messages Area */}
-            <div className="flex-1 overflow-y-auto p-6 space-y-6 custom-scrollbar">
+            <div ref={messagesContainerRef} className="flex-1 overflow-y-auto p-6 space-y-6 custom-scrollbar">
               {messages.map((msg) => (
                 <div key={msg.id} className={`flex flex-col ${msg.sender === 'user' ? 'items-end' : 'items-start'}`}>
                   <div className={`flex gap-3 max-w-[85%] ${msg.sender === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
