@@ -1,4 +1,4 @@
-import { Bot } from 'lucide-react';
+import logoGia from '../assets/logo-gia.png';
 
 export default function Footer() {
     return (
@@ -6,16 +6,13 @@ export default function Footer() {
             <div className="container mx-auto px-6">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-8">
 
-                    <div className="text-center md:text-left flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-lg bg-[#00dbff]/10 flex items-center justify-center border border-[#00dbff]/20">
-                           <Bot className="w-5 h-5 text-[#00dbff]" />
-                        </div>
-                        <div>
-                            <span className="text-xl font-bold tracking-wide font-display text-white block">
-                                Gia<span className="text-[#00dbff]">.</span>
-                            </span>
-                            <p className="text-gray-500 text-xs mt-1">Inteligência Operacional Imobiliária.</p>
-                        </div>
+                    <div className="text-center md:text-left flex flex-col gap-1">
+                        <img
+                            src={logoGia}
+                            alt="Gia — Inteligência Artificial Imobiliária"
+                            className="h-8 w-auto object-contain"
+                        />
+                        <p className="text-gray-500 text-xs mt-1">Inteligência Operacional Imobiliária.</p>
                     </div>
 
                     <div className="flex gap-8 text-gray-400">
