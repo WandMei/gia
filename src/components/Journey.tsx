@@ -10,7 +10,7 @@ export default function Journey() {
             A dor do <span className="text-[#00dbff]">Atendimento Manual</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Um atendimento lento custa contratos. A Gia transforma o caos em processos fluídos.
+            Um atendimento lento custa contratos. A gIA transforma o caos em processos fluídos.
           </p>
         </div>
 
@@ -28,7 +28,7 @@ export default function Journey() {
             <div className="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center mb-6">
               <Frown className="w-6 h-6 text-red-400" />
             </div>
-            <h3 className="text-xl font-bold text-white mb-4">Sem a Gia (Realidade Atual)</h3>
+            <h3 className="text-xl font-bold text-white mb-4">Sem a gIA (Realidade Atual)</h3>
             <ul className="space-y-4">
               <li className="flex gap-3 text-gray-400 items-start">
                 <Clock className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
@@ -50,7 +50,7 @@ export default function Journey() {
             <ArrowRight className="w-8 h-8 text-[#00dbff]/50" />
           </div>
 
-          {/* Card: Solução Gia */}
+          {/* Card: Solução gIA */}
           <motion.div 
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -62,7 +62,7 @@ export default function Journey() {
             <div className="w-12 h-12 rounded-xl bg-[#00dbff]/20 flex items-center justify-center mb-6 border border-[#00dbff]/30">
               <Bot className="w-6 h-6 text-[#00dbff]" />
             </div>
-            <h3 className="text-xl font-bold text-[#00dbff] mb-4">Com a Inteligência da Gia</h3>
+            <h3 className="text-xl font-bold text-[#00dbff] mb-4">Com a Inteligência da gIA</h3>
             <ul className="space-y-4">
               <li className="flex gap-3 text-gray-300 items-start">
                 <Zap className="w-5 h-5 text-[#00dbff] shrink-0 mt-0.5" />

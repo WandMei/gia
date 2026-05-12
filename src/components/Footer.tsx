@@ -9,7 +9,7 @@ export default function Footer() {
                     <div className="text-center md:text-left flex flex-col gap-1">
                         <img
                             src={logoGia}
-                            alt="Gia — Inteligência Artificial Imobiliária"
+                            alt="gIA — Inteligência Artificial Imobiliária"
                             className="h-8 w-auto object-contain"
                         />
                         <p className="text-gray-500 text-xs mt-1">Inteligência Operacional Imobiliária.</p>
@@ -22,7 +22,7 @@ export default function Footer() {
                     </div>
 
                     <div className="text-gray-600">
-                        &copy; 2026 Gia AI. Todos os direitos reservados.
+                        &copy; 2026 gIA AI. Todos os direitos reservados.
                     </div>
                 </div>
             </div>

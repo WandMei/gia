@@ -21,7 +21,7 @@ export default function Header() {
         <div className="flex items-center">
           <img
             src={logoGia}
-            alt="Gia — Inteligência Artificial Imobiliária"
+            alt="gIA — Inteligência Artificial Imobiliária"
             className="h-9 w-auto object-contain"
           />
         </div>
@@ -36,7 +36,7 @@ export default function Header() {
         {/* CTA Button */}
         <div className="hidden md:flex items-center">
           <a href="#chat" className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-[#00dbff] to-[#00aacc] hover:from-[#00aacc] hover:to-[#007799] text-[#002233] font-bold transition-all shadow-lg shadow-[#00dbff]/20 hover:scale-105">
-            Falar com a Gia
+            Falar com a gIA
           </a>
         </div>
 
@@ -52,7 +52,7 @@ export default function Header() {
            <a href="#recursos" className="text-gray-300 hover:text-white py-2" onClick={() => setIsMobileMenuOpen(false)}>RECURSOS</a>
            <a href="#jornada" className="text-gray-300 hover:text-white py-2" onClick={() => setIsMobileMenuOpen(false)}>COMO FUNCIONA</a>
            <a href="#chat" className="flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-[#00dbff] text-[#002233] font-bold w-full mt-4" onClick={() => setIsMobileMenuOpen(false)}>
-            Falar com a Gia
+            Falar com a gIA
           </a>
         </div>
       )}

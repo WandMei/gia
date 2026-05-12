@@ -54,17 +54,17 @@ const solutions = [
   {
     icon: FileText,
     title: "Automação de Serviços",
-    description: "Emissão de 2ª via de boletos, envio de contratos e consulta de extratos. A Gia integra com seu ERP para fornecer dados em segundos."
+    description: "Emissão de 2ª via de boletos, envio de contratos e consulta de extratos. A gIA integra com seu ERP para fornecer dados em segundos."
   },
   {
     icon: Target,
     title: "Prospecção Inteligente",
-    description: "Qualificação de leads automática. A Gia entende se o cliente busca alugar ou comprar e faz as perguntas certas antes de transferir."
+    description: "Qualificação de leads automática. A gIA entende se o cliente busca alugar ou comprar e faz as perguntas certas antes de transferir."
   },
   {
     icon: Smartphone,
     title: "Omnichannel Integrado",
-    description: "O atendimento acontece onde seu cliente está. Seja no WhatsApp, Instagram, Messenger ou Telegram, a Gia mantém o contexto.",
+    description: "O atendimento acontece onde seu cliente está. Seja no WhatsApp, Instagram, Messenger ou Telegram, a gIA mantém o contexto.",
     platforms: [
       { Logo: WhatsAppLogo, name: "WhatsApp" },
       { Logo: InstagramLogo, name: "Instagram" },
@@ -92,7 +92,7 @@ export default function Solutions() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">Tudo que uma <span className="text-[#00dbff]">Imobiliária Moderna</span> precisa</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">A Gia não é um chatbot comum. É uma inteligência operacional treinada para o setor imobiliário.</p>
+          <p className="text-gray-400 max-w-2xl mx-auto text-lg">A gIA não é um chatbot comum. É uma inteligência operacional treinada para o setor imobiliário.</p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

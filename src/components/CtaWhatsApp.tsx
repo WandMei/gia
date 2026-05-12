@@ -3,7 +3,7 @@ import { MessageCircle, ArrowRight } from 'lucide-react';
 
 const WA_NUMBER = '5514998552220';
 const WA_MESSAGE = encodeURIComponent(
-  'Olá! Estava na landing page e tenho interesse em saber mais sobre o agente de IA Gia para a minha imobiliária.'
+  'Olá! Estava verificando os recursos da gIA e tenho interesse em saber mais sobre a implementação.'
 );
 const WA_LINK = `https://api.whatsapp.com/send?phone=${WA_NUMBER}&text=${WA_MESSAGE}`;
 
@@ -33,7 +33,7 @@ export default function CtaWhatsApp() {
           </h2>
           <p className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
             Fale com nossos especialistas e descubra como a{' '}
-            <span className="text-white font-semibold">Gia</span> pode transformar
+            <span className="text-white font-semibold">gIA</span> pode transformar
             a sua imobiliária — sem fórmula mágica, sem promessas vazias.
           </p>
 

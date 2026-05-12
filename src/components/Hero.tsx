@@ -47,7 +47,7 @@ export default function Hero() {
           className="text-lg md:text-xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed"
         >
           Da qualificação de leads à emissão de contratos e 2ª via de boletos. 
-          A <span className="text-white font-semibold">Gia</span> assume o trabalho manual para que seus corretores foquem em fechar negócios.
+          A <span className="text-white font-semibold">gIA</span> assume o trabalho manual para que seus corretores foquem em fechar negócios.
         </motion.p>
         
         <motion.div 
@@ -61,7 +61,7 @@ export default function Hero() {
             onClick={scrollToChat}
             className="w-full sm:w-auto px-8 py-4 rounded-xl bg-[#00dbff] hover:bg-[#00aacc] text-[#002233] font-bold text-lg transition-all transform hover:scale-105 shadow-lg shadow-[#00dbff]/25 flex items-center justify-center gap-2 group"
           >
-            Ver a Gia em Ação
+            Ver a gIA em Ação
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </a>
         </motion.div>

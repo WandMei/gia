@@ -22,7 +22,7 @@ export default function ChatWidget() {
     {
       id: '1',
       sender: 'bot',
-      text: 'Olá! Eu sou a Gia, a Inteligência Artificial da sua imobiliária. Como posso te ajudar hoje?',
+      text: 'Olá! Eu sou a gIA, a Inteligência Artificial da sua imobiliária. Como posso te ajudar hoje?',
       options: ['Quero alugar um imóvel', 'Segunda via de boleto', 'Falar com corretor']
     }
   ]);
@@ -99,7 +99,7 @@ export default function ChatWidget() {
       }]);
 
     } catch (error) {
-      console.error('[Gia Webhook Error]', error);
+      console.error('[gIA Webhook Error]', error);
       setMessages(prev => [...prev, {
         id: (Date.now() + 1).toString(),
         sender: 'bot',
@@ -126,20 +126,22 @@ export default function ChatWidget() {
             <div>
               <img
                 src={logoGia}
-                alt="Gia"
+                alt="gIA"
                 className="h-10 w-auto object-contain mb-6"
               />
-              <h3 className="text-2xl font-bold text-white mb-3">Experimente a Gia</h3>
+              <h3 className="text-2xl font-bold text-white mb-3">Experimente a gIA</h3>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                Interaja com o nosso componente de demonstração. A Gia pode ser integrada via n8n diretamente no seu site ou WhatsApp.
+                Interaja com o nosso componente de demonstração.
+                <br />
+                A gIA pode ser integrada facilmente em seu site ou WhatsApp.
               </p>
             </div>
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-sm text-[#00dbff]">
                 <div className="w-2 h-2 rounded-full bg-[#00dbff] animate-pulse"></div>
-                Gia Conectada
+                gIA Conectada
               </div>
-              <div className="text-xs text-gray-500">Powered by n8n AI Agent</div>
+              <div className="text-xs text-gray-500">Powered by Guess Tech</div>
             </div>
           </div>
 
@@ -151,7 +153,7 @@ export default function ChatWidget() {
                 <Bot className="w-6 h-6 text-[#00dbff]" />
               </div>
               <div>
-                <h4 className="text-white font-semibold">Gia AI</h4>
+                <h4 className="text-white font-semibold">gIA AI</h4>
                 <p className="text-xs text-[#00dbff]">Assistente Imobiliária</p>
               </div>
             </div>
@@ -193,7 +195,7 @@ export default function ChatWidget() {
                   </div>
                   <div className="bg-[#001a26] border border-[#00dbff]/10 p-4 rounded-2xl rounded-tl-sm flex items-center gap-2">
                     <Loader2 className="w-4 h-4 text-[#00dbff] animate-spin" />
-                    <span className="text-xs text-gray-400">Gia está processando...</span>
+                    <span className="text-xs text-gray-400">gIA está processando...</span>
                   </div>
                 </div>
               )}
@@ -209,7 +211,7 @@ export default function ChatWidget() {
                   type="text"
                   value={inputText}
                   onChange={(e) => setInputText(e.target.value)}
-                  placeholder="Digite sua mensagem para a Gia..."
+                  placeholder="Digite sua mensagem para a gIA..."
                   className="flex-1 bg-transparent border-none outline-none text-white text-sm px-3 placeholder-gray-500"
                 />
                 <button
