@@ -4,6 +4,7 @@ import ChatWidget from './components/ChatWidget';
 import Journey from './components/Journey';
 import Solutions from './components/Solutions';
 import Security from './components/Security';
+import CtaWhatsApp from './components/CtaWhatsApp';
 import Footer from './components/Footer';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Journey />
         <Solutions />
         <Security />
+        <CtaWhatsApp />
       </main>
       <Footer />
     </div>

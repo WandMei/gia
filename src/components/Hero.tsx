@@ -2,6 +2,14 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
 
 export default function Hero() {
+  const scrollToChat = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const target = document.getElementById('chat');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-[#002233]">
       {/* Background Elements */}
@@ -27,8 +35,9 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight max-w-5xl mx-auto"
         >
-          Gestão e Atendimento Imobiliário com <br className="hidden md:block"/>
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00dbff] to-[#00aacc]">Inteligência Artificial</span>
+          O Fim do Gargalo Operacional: <br className="hidden md:block"/>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00dbff] to-[#00aacc]">Venda e Alugue 24/7</span>{' '}
+          <span className="text-white">sem sobrecarregar a sua equipe</span>
         </motion.h1>
         
         <motion.p 
@@ -47,7 +56,11 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <a href="#chat" className="w-full sm:w-auto px-8 py-4 rounded-xl bg-[#00dbff] hover:bg-[#00aacc] text-[#002233] font-bold text-lg transition-all transform hover:scale-105 shadow-lg shadow-[#00dbff]/25 flex items-center justify-center gap-2 group">
+          <a
+            href="#chat"
+            onClick={scrollToChat}
+            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-[#00dbff] hover:bg-[#00aacc] text-[#002233] font-bold text-lg transition-all transform hover:scale-105 shadow-lg shadow-[#00dbff]/25 flex items-center justify-center gap-2 group"
+          >
             Ver a Gia em Ação
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </a>
