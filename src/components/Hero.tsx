@@ -17,9 +17,9 @@ export default function Hero() {
         <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-[#00dbff]/10 rounded-full blur-[100px] animate-pulse-slow"></div>
         <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-[#007799]/10 rounded-full blur-[120px] animate-pulse-slow delay-1000"></div>
       </div>
-      
+
       <div className="container mx-auto px-6 relative z-10 text-center">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -28,29 +28,29 @@ export default function Hero() {
           <Sparkles className="w-4 h-4 text-[#00dbff]" />
           <span className="text-sm font-medium text-[#00dbff]">A Evolução do Atendimento Imobiliário</span>
         </motion.div>
-        
-        <motion.h1 
+
+        <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight max-w-5xl mx-auto"
         >
-          O Fim do Gargalo Operacional: <br className="hidden md:block"/>
+          O Fim do Gargalo Operacional: <br className="hidden md:block" />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00dbff] to-[#00aacc]">Venda e Alugue 24/7</span>{' '}
           <span className="text-white">sem sobrecarregar a sua equipe</span>
         </motion.h1>
-        
-        <motion.p 
+
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg md:text-xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed"
         >
-          Da qualificação de leads à emissão de contratos e 2ª via de boletos. 
-          A <span className="text-white font-semibold">gIA</span> assume o trabalho manual para que seus corretores foquem em fechar negócios.
+          Da qualificação de leads à emissão de contratos e 2ª via de boletos.
+          <br />A <span className="text-white font-semibold">gIA</span> assume o trabalho manual para que seus corretores foquem em fechar negócios.
         </motion.p>
-        
-        <motion.div 
+
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
