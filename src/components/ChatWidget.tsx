@@ -17,13 +17,43 @@ const WEBHOOK_URL = 'https://gwebhook.guesstech.com.br/webhook/gia';
 const SESSION_ID = crypto.randomUUID();
 // ─────────────────────────────────────────────────────────────────────────────
 
+const formatMessageText = (text: string) => {
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
+  const lines = text.split(/(?:\r\n|\r|\n|\\n)/);
+
+  return lines.map((line, i) => {
+    const parts = line.split(urlRegex);
+    return (
+      <span key={i}>
+        {parts.map((part, j) => {
+          if (part.match(urlRegex)) {
+            return (
+              <a
+                key={j}
+                href={part}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#00dbff] underline hover:text-white transition-colors break-all"
+              >
+                {part}
+              </a>
+            );
+          }
+          return part;
+        })}
+        {i !== lines.length - 1 && <br />}
+      </span>
+    );
+  });
+};
+
 export default function ChatWidget() {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
       sender: 'bot',
       text: 'Olá! Eu sou a gIA, a Inteligência Artificial da sua imobiliária. Como posso te ajudar hoje?',
-      options: ['Quero alugar um imóvel', 'Segunda via de boleto', 'Falar com corretor']
+      options: ['Quero alugar um imóvel', 'Segunda via de boleto', 'Preciso do meu extrato']
     }
   ]);
   const [inputText, setInputText] = useState('');
@@ -168,7 +198,7 @@ export default function ChatWidget() {
                     </div>
                     <div>
                       <div className={`p-4 rounded-2xl text-sm leading-relaxed ${msg.sender === 'user' ? 'bg-[#007799] text-white rounded-tr-sm' : 'bg-[#001a26] text-gray-200 border border-[#00dbff]/10 rounded-tl-sm'}`}>
-                        {msg.text}
+                        {formatMessageText(msg.text)}
                       </div>
                       {msg.options && (
                         <div className="mt-3 flex flex-wrap gap-2">
