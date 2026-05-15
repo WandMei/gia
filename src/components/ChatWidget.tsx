@@ -165,6 +165,7 @@ export default function ChatWidget() {
                 <br />
                 A gIA pode ser integrada facilmente em seu site ou WhatsApp.
               </p>
+              <h6 className="text-sm font-bold text-white mb-3">Esta é uma versão de demonstração e todos os dados são fictícios</h6>
             </div>
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-sm text-[#00dbff]">
