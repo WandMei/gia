@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import logoGia from '../assets/logo-gia.png';
+import logoGia from '../assets/logo-guess.png';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -49,9 +49,9 @@ export default function Header() {
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-[#002233] border-b border-[#00dbff]/20 p-6 flex flex-col space-y-4 shadow-2xl">
-           <a href="#recursos" className="text-gray-300 hover:text-white py-2" onClick={() => setIsMobileMenuOpen(false)}>RECURSOS</a>
-           <a href="#jornada" className="text-gray-300 hover:text-white py-2" onClick={() => setIsMobileMenuOpen(false)}>COMO FUNCIONA</a>
-           <a href="#chat" className="flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-[#00dbff] text-[#002233] font-bold w-full mt-4" onClick={() => setIsMobileMenuOpen(false)}>
+          <a href="#recursos" className="text-gray-300 hover:text-white py-2" onClick={() => setIsMobileMenuOpen(false)}>RECURSOS</a>
+          <a href="#jornada" className="text-gray-300 hover:text-white py-2" onClick={() => setIsMobileMenuOpen(false)}>COMO FUNCIONA</a>
+          <a href="#chat" className="flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-[#00dbff] text-[#002233] font-bold w-full mt-4" onClick={() => setIsMobileMenuOpen(false)}>
             Falar com a gIA
           </a>
         </div>
