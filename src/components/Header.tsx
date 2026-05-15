@@ -18,12 +18,14 @@ export default function Header() {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#002233]/90 backdrop-blur-md py-4 border-b border-[#00dbff]/10' : 'py-6 bg-transparent'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
-        <div className="flex items-center">
-          <img
-            src={logoGia}
-            alt="gIA — Inteligência Artificial Imobiliária"
-            className="h-9 w-auto object-contain"
-          />
+        <a href="https://guesstech.com.br/" className="flex items-center cursor-pointer transition-opacity hover:opacity-80">
+          <a href="https://guesstech.com.br/" target="_blank" rel="noopener noreferrer" className="block">
+            <img
+              src={logoGia}
+              alt="gIA — Inteligência Artificial Imobiliária"
+              className="h-9 w-auto object-contain hover:opacity-80 transition-opacity"
+            />
+          </a>
         </div>
 
         {/* Desktop Nav */}
