@@ -15,11 +15,11 @@ export default function Footer() {
                         <p className="text-gray-500 text-xs mt-1">Inteligência Operacional Imobiliária.</p>
                     </div>
 
-                    <div className="flex gap-8 text-gray-400">
+                    {/* <div className="flex gap-8 text-gray-400">
                         <a href="#" className="hover:text-[#00dbff] transition-colors">Termos de Uso</a>
                         <a href="#" className="hover:text-[#00dbff] transition-colors">Política de Privacidade</a>
                         <a href="#" className="hover:text-[#00dbff] transition-colors">Suporte</a>
-                    </div>
+                    </div> */}
 
                     <div className="text-gray-600">
                         &copy; 2026 gIA AI. Todos os direitos reservados.
