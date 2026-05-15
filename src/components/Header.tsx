@@ -19,14 +19,12 @@ export default function Header() {
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
         <a href="https://guesstech.com.br/" className="flex items-center cursor-pointer transition-opacity hover:opacity-80">
-          <a href="https://guesstech.com.br/" target="_blank" rel="noopener noreferrer" className="block">
-            <img
-              src={logoGia}
-              alt="gIA — Inteligência Artificial Imobiliária"
-              className="h-9 w-auto object-contain hover:opacity-80 transition-opacity"
-            />
-          </a>
-        </div>
+          <img
+            src={logoGia}
+            alt="gIA — Inteligência Artificial Imobiliária"
+            className="h-9 w-auto object-contain"
+          />
+        </a>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center space-x-8">
