@@ -52,7 +52,7 @@ export default function ChatWidget() {
     {
       id: '1',
       sender: 'bot',
-      text: 'Olá! Eu sou a gIA, a Inteligência Artificial para sua imobiliária. Como posso te ajudar hoje?',
+      text: 'Olá! Eu sou a gIA, a Inteligência Artificial para sua imobiliária Como posso te ajudar hoje?',
       options: ['Quero alugar um imóvel', 'Segunda via de boleto', 'Preciso do meu extrato']
     }
   ]);
