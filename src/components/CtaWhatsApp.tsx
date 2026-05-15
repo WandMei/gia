@@ -3,13 +3,13 @@ import { MessageCircle, ArrowRight } from 'lucide-react';
 
 const WA_NUMBER = '5514998552220';
 const WA_MESSAGE = encodeURIComponent(
-  'Olá! Tenho interesse em conhecer o ecossistema Guess One e agendar uma demonstração.'
+  'Olá! Estava verificando os recursos da gIA e tenho interesse em saber mais sobre a implementação.'
 );
 const WA_LINK = `https://api.whatsapp.com/send?phone=${WA_NUMBER}&text=${WA_MESSAGE}`;
 
 export default function CtaWhatsApp() {
   return (
-    <section id="contact" className="py-24 relative overflow-hidden bg-[#001a26]">
+    <section className="py-24 relative overflow-hidden bg-[#001a26]">
       {/* Glow background */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[300px] bg-[#00dbff]/8 rounded-full blur-[100px]" />
@@ -29,37 +29,28 @@ export default function CtaWhatsApp() {
           </div>
 
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            O futuro da sua gestão imobiliária começa agora.
+            Pronto para escalar a sua operação?
           </h2>
           <p className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Fale com nossos especialistas e descubra como o{' '}
-            <span className="text-white font-semibold">gManager</span> pode transformar
-            a sua imobiliária — centralizando sua operação financeira e de contratos.
+            Fale com nossos especialistas e descubra como a{' '}
+            <span className="text-white font-semibold">gIA</span> pode transformar
+            a sua imobiliária — sem fórmula mágica, sem promessas vazias.
           </p>
 
-          <motion.div
-            animate={{ 
-              scale: [1, 1.03, 1], 
-              boxShadow: ["0px 0px 0px 0px rgba(37,211,102,0)", "0px 0px 25px 10px rgba(37,211,102,0.2)", "0px 0px 0px 0px rgba(37,211,102,0)"] 
-            }}
-            transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-            className="inline-block rounded-2xl"
+          <motion.a
+            href={WA_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.97 }}
+            className="inline-flex items-center gap-3 px-10 py-5 rounded-2xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-lg transition-colors shadow-xl shadow-[#25D366]/20 group"
           >
-            <motion.a
-              href={WA_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-4 px-12 py-6 rounded-2xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-xl transition-colors shadow-xl group"
-            >
-              <MessageCircle className="w-7 h-7" />
-              Agendar Minha Demonstração
-              <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-            </motion.a>
-          </motion.div>
+            <MessageCircle className="w-6 h-6" />
+            Falar com um Especialista
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </motion.a>
 
-          <p className="mt-6 text-sm text-gray-500">
+          <p className="mt-5 text-xs text-gray-600">
             Nenhum compromisso. Apenas uma conversa sem pressão.
           </p>
         </motion.div>
