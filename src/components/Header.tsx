@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import logoGia from '../assets/logo-gia.png';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,11 +16,10 @@ export default function Header() {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#002233]/90 backdrop-blur-md py-4 border-b border-[#00dbff]/10' : 'py-6 bg-transparent'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
-        {/* Logo */}
         <div className="flex items-center">
           <img
-            src={logoGia}
-            alt="gIA — Inteligência Artificial Imobiliária"
+            src="/logo.png"
+            alt="gManager"
             className="h-9 w-auto object-contain"
           />
         </div>
@@ -30,13 +28,12 @@ export default function Header() {
         <nav className="hidden md:flex items-center space-x-8">
           <a href="#recursos" className="text-gray-300 hover:text-[#00dbff] transition-colors text-sm font-medium tracking-wide">RECURSOS</a>
           <a href="#jornada" className="text-gray-300 hover:text-[#00dbff] transition-colors text-sm font-medium tracking-wide">COMO FUNCIONA</a>
-          <a href="#chat" className="text-gray-300 hover:text-[#00dbff] transition-colors text-sm font-medium tracking-wide">EXPERIMENTE</a>
         </nav>
 
         {/* CTA Button */}
         <div className="hidden md:flex items-center">
-          <a href="#chat" className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-[#00dbff] to-[#00aacc] hover:from-[#00aacc] hover:to-[#007799] text-[#002233] font-bold transition-all shadow-lg shadow-[#00dbff]/20 hover:scale-105">
-            Falar com a gIA
+          <a href="#contact" className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-[#00dbff] to-[#00aacc] hover:from-[#00aacc] hover:to-[#007799] text-[#002233] font-bold transition-all shadow-lg shadow-[#00dbff]/20 hover:scale-105">
+            Agendar Demonstração
           </a>
         </div>
 
@@ -51,8 +48,8 @@ export default function Header() {
         <div className="md:hidden absolute top-full left-0 right-0 bg-[#002233] border-b border-[#00dbff]/20 p-6 flex flex-col space-y-4 shadow-2xl">
            <a href="#recursos" className="text-gray-300 hover:text-white py-2" onClick={() => setIsMobileMenuOpen(false)}>RECURSOS</a>
            <a href="#jornada" className="text-gray-300 hover:text-white py-2" onClick={() => setIsMobileMenuOpen(false)}>COMO FUNCIONA</a>
-           <a href="#chat" className="flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-[#00dbff] text-[#002233] font-bold w-full mt-4" onClick={() => setIsMobileMenuOpen(false)}>
-            Falar com a gIA
+           <a href="#contact" className="flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-[#00dbff] text-[#002233] font-bold w-full mt-4" onClick={() => setIsMobileMenuOpen(false)}>
+            Agendar Demonstração
           </a>
         </div>
       )}
