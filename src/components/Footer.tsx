@@ -1,5 +1,3 @@
-import logoGia from '../assets/logo-gia.png';
-
 export default function Footer() {
     return (
         <footer className="bg-[#000a0f] py-12 border-t border-[#00dbff]/10 text-sm">
@@ -8,11 +6,11 @@ export default function Footer() {
 
                     <div className="text-center md:text-left flex flex-col gap-1">
                         <img
-                            src={logoGia}
-                            alt="gIA — Inteligência Artificial Imobiliária"
+                            src="/logo.png"
+                            alt="gManager — A Evolução Inteligente da Gestão Imobiliária"
                             className="h-8 w-auto object-contain"
                         />
-                        <p className="text-gray-500 text-xs mt-1">Inteligência Operacional Imobiliária.</p>
+                        <p className="text-gray-500 text-xs mt-1">Ecossistema Completo para Imobiliárias.</p>
                     </div>
 
                     <div className="flex gap-8 text-gray-400">
@@ -22,7 +20,7 @@ export default function Footer() {
                     </div>
 
                     <div className="text-gray-600">
-                        &copy; 2026 gIA AI. Todos os direitos reservados.
+                        &copy; 2026 gManager. Todos os direitos reservados.
                     </div>
                 </div>
             </div>
