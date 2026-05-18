@@ -72,3 +72,36 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--color-brand-blue);
   color: white;
 }
+
+/* ─── Botão Primário Blindado (Mac/Chrome Cross-Platform Reset) ──── */
+a[class*="bg-[#00dbff]"],
+button[class*="bg-[#00dbff]"],
+a[class*="bg-[#25D366]"],
+button[class*="bg-[#25D366]"],
+a[class*="bg-[#00C4CC]"],
+button[class*="bg-[#00C4CC]"] {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  border: 1px solid transparent !important;
+}
+
+/* Garante o background-color blindado explicitamente onde usamos o ciano e verde */
+a[class*="bg-[#00dbff]"],
+button[class*="bg-[#00dbff]"] {
+  background-color: #00dbff !important;
+}
+
+a.hover\:bg-\[\#00aacc\]:hover,
+button.hover\:bg-\[\#00aacc\]:hover {
+  background-color: #00aacc !important;
+}
+
+a[class*="bg-[#25D366]"],
+button[class*="bg-[#25D366]"] {
+  background-color: #25D366 !important;
+}
+
+a.hover\:bg-\[\#20bd5a\]:hover,
+button.hover\:bg-\[\#20bd5a\]:hover {
+  background-color: #20bd5a !important;
+}
