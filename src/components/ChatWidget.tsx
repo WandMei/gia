@@ -18,29 +18,102 @@ const SESSION_ID = crypto.randomUUID();
 // ─────────────────────────────────────────────────────────────────────────────
 
 const formatMessageText = (text: string) => {
-  const urlRegex = /(https?:\/\/[^\s]+)/g;
   const lines = text.split(/(?:\r\n|\r|\n|\\n)/);
 
   return lines.map((line, i) => {
-    const parts = line.split(urlRegex);
+    const parts: any[] = [];
+    let currentText = line;
+
+    // Regexes to match markdown links and plain URLs
+    const markdownRegex = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/;
+    const plainUrlRegex = /(https?:\/\/[^\s]+)/;
+
+    while (currentText.length > 0) {
+      const mdMatch = currentText.match(markdownRegex);
+      const plainMatch = currentText.match(plainUrlRegex);
+
+      let firstMatch: {
+        index: number;
+        length: number;
+        text: string;
+        url: string;
+        isMarkdown: boolean;
+      } | null = null;
+
+      if (mdMatch && mdMatch.index !== undefined) {
+        firstMatch = {
+          index: mdMatch.index,
+          length: mdMatch[0].length,
+          text: mdMatch[1],
+          url: mdMatch[2],
+          isMarkdown: true
+        };
+      }
+
+      if (plainMatch && plainMatch.index !== undefined) {
+        const rawUrl = plainMatch[0];
+        let urlLength = rawUrl.length;
+
+        // Strip trailing punctuation (like closing parenthesis, periods, etc.)
+        while (urlLength > 0 && /[),.:;!?]/.test(rawUrl[urlLength - 1])) {
+          const openParens = (rawUrl.slice(0, urlLength).match(/\(/g) || []).length;
+          const closeParens = (rawUrl.slice(0, urlLength).match(/\)/g) || []).length;
+          if (rawUrl[urlLength - 1] === ')' && closeParens > openParens) {
+            urlLength--;
+          } else if (rawUrl[urlLength - 1] !== ')') {
+            urlLength--;
+          } else {
+            break;
+          }
+        }
+
+        const cleanUrl = rawUrl.slice(0, urlLength);
+
+        if (cleanUrl.length > 0) {
+          // Plain URL match is selected if it occurs before the markdown match (if any)
+          if (!firstMatch || plainMatch.index < firstMatch.index) {
+            firstMatch = {
+              index: plainMatch.index,
+              length: cleanUrl.length,
+              text: cleanUrl,
+              url: cleanUrl,
+              isMarkdown: false
+            };
+          }
+        }
+      }
+
+      if (firstMatch) {
+        // Add plain text before the match
+        if (firstMatch.index > 0) {
+          parts.push(currentText.slice(0, firstMatch.index));
+        }
+
+        // Add the formatted link element
+        parts.push(
+          <a
+            key={parts.length}
+            href={firstMatch.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#00dbff] underline hover:text-white transition-colors break-all"
+          >
+            {firstMatch.text}
+          </a>
+        );
+
+        // Advance currentText pointer past the match
+        currentText = currentText.slice(firstMatch.index + firstMatch.length);
+      } else {
+        // No matches found, add remaining text
+        parts.push(currentText);
+        break;
+      }
+    }
+
     return (
       <span key={i}>
-        {parts.map((part, j) => {
-          if (part.match(urlRegex)) {
-            return (
-              <a
-                key={j}
-                href={part}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#00dbff] underline hover:text-white transition-colors break-all"
-              >
-                {part}
-              </a>
-            );
-          }
-          return part;
-        })}
+        {parts}
         {i !== lines.length - 1 && <br />}
       </span>
     );
