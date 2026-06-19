@@ -22,7 +22,7 @@ export default function Footer() {
                     </div> */}
 
                     <div className="text-gray-600">
-                        &copy; 2026 gIA AI. Todos os direitos reservados.
+                        &copy; 2026 gIA AI. Todos os direitos reservados. | CNPJ 45.522.647/0001-11
                     </div>
                 </div>
             </div>
