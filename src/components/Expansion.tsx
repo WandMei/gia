@@ -20,11 +20,11 @@ export default function Expansion() {
 
                         <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
                             Sua empresa não é imobiliária? <br />
-                            <span className="text-violet-500">Nossa tecnologia se adapta.</span>
+                            <span className="text-violet-500">Nossa tecnologia se adapta</span>
                         </h2>
 
                         <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-                            O núcleo de inteligência da Alcateia é agnóstico. Nossos algoritmos de processamento de linguagem natural e automação de fluxos podem ser calibrados para qualquer setor que exija escala e precisão.
+                            O núcleo de inteligência da Alcateia é agnóstico — nossos algoritmos de processamento de linguagem natural e automação de fluxos podem ser calibrados para qualquer setor que exija escala e precisão
                         </p>
 
                         <button className="px-8 py-4 rounded-lg bg-transparent border border-violet-500/30 text-violet-400 hover:bg-violet-500/10 hover:border-violet-500 font-semibold transition-all">
@@ -40,10 +40,10 @@ export default function Expansion() {
                         className="md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6"
                     >
                         {[
-                            { icon: Stethoscope, title: "Clínicas & Saúde", desc: "Triagem de pacientes e agendamento." },
-                            { icon: ShoppingCart, title: "E-commerce", desc: "Recuperação de carrinho e suporte." },
-                            { icon: Briefcase, title: "Corporativo", desc: "Automação de processos internos." },
-                            { icon: Layers, title: "Logística", desc: "Rastreio e comunicação com motoristas." }
+                            { icon: Stethoscope, title: "Clínicas & Saúde", desc: "Triagem de pacientes e agendamento" },
+                            { icon: ShoppingCart, title: "E-commerce", desc: "Recuperação de carrinho e suporte" },
+                            { icon: Briefcase, title: "Corporativo", desc: "Automação de processos internos" },
+                            { icon: Layers, title: "Logística", desc: "Rastreio e comunicação com motoristas" }
                         ].map((item, idx) => (
                             <div key={idx} className="bg-white/5 border border-white/5 p-6 rounded-xl hover:bg-white/10 transition-colors">
                                 <item.icon className="w-8 h-8 text-violet-500 mb-4" />

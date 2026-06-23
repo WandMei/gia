@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Send, Bot, User, Loader2 } from 'lucide-react';
-import logoGia from '../assets/logo-gia.png';
+import logoGia from '/logo-gia.png';
 
 interface Message {
   id: string;
@@ -234,9 +234,9 @@ export default function ChatWidget() {
               />
               <h3 className="text-2xl font-bold text-white mb-3">Experimente a gIA</h3>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                Interaja com o nosso componente de demonstração.
+                Interaja com o nosso componente de demonstração
                 <br />
-                A gIA pode ser integrada facilmente em seu site ou WhatsApp.
+                A gIA pode ser integrada facilmente em seu site ou WhatsApp
               </p>
               <h6 className="text-sm font-bold text-white mb-3">Esta é uma versão de demonstração e todos os dados são fictícios</h6>
             </div>

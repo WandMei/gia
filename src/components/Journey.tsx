@@ -10,7 +10,7 @@ export default function Journey() {
             A dor do <span className="text-[#00dbff]">Atendimento Manual</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Um atendimento lento custa contratos. A gIA transforma o caos em processos fluídos.
+            Um atendimento lento custa contratos — a gIA transforma o caos em processos fluídos
           </p>
         </div>
 
@@ -32,15 +32,15 @@ export default function Journey() {
             <ul className="space-y-4">
               <li className="flex gap-3 text-gray-400 items-start">
                 <Clock className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
-                <span>Leads esperando horas por uma resposta básica no WhatsApp.</span>
+                <span>Leads esperando horas por uma resposta básica no WhatsApp</span>
               </li>
               <li className="flex gap-3 text-gray-400 items-start">
                 <Clock className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
-                <span>Corretores perdendo tempo enviando 2ª via de boleto manualmente.</span>
+                <span>Corretores perdendo tempo enviando 2ª via de boleto manualmente</span>
               </li>
               <li className="flex gap-3 text-gray-400 items-start">
                 <Clock className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
-                <span>Atendimento limitado ao horário comercial (clientes esfriam).</span>
+                <span>Atendimento limitado ao horário comercial (clientes esfriam)</span>
               </li>
             </ul>
           </motion.div>
@@ -66,15 +66,15 @@ export default function Journey() {
             <ul className="space-y-4">
               <li className="flex gap-3 text-gray-300 items-start">
                 <Zap className="w-5 h-5 text-[#00dbff] shrink-0 mt-0.5" />
-                <span>Respostas instantâneas e humanizadas, 24 horas por dia, 7 dias por semana.</span>
+                <span>Respostas instantâneas e humanizadas, 24 horas por dia, 7 dias por semana</span>
               </li>
               <li className="flex gap-3 text-gray-300 items-start">
                 <Zap className="w-5 h-5 text-[#00dbff] shrink-0 mt-0.5" />
-                <span>Automação total de serviços: envio de extratos, boletos e contratos via PDF.</span>
+                <span>Automação total de serviços: envio de extratos, boletos e contratos via PDF</span>
               </li>
               <li className="flex gap-3 text-gray-300 items-start">
                 <Zap className="w-5 h-5 text-[#00dbff] shrink-0 mt-0.5" />
-                <span>Integração nativa com seu CRM. O corretor só entra na etapa de negociação final.</span>
+                <span>Integração nativa com seu CRM — o corretor só entra na etapa de negociação final</span>
               </li>
             </ul>
           </motion.div>

@@ -1,4 +1,4 @@
-import logoGia from '../assets/logo-gia.png';
+import logoGia from '/logo-gia.png';
 
 export default function Footer() {
     return (
@@ -12,7 +12,7 @@ export default function Footer() {
                             alt="gIA — Inteligência Artificial Imobiliária"
                             className="h-8 w-auto object-contain"
                         />
-                        <p className="text-gray-500 text-xs mt-1">Inteligência Operacional Imobiliária.</p>
+                        <p className="text-gray-500 text-xs mt-1">Inteligência Operacional Imobiliária</p>
                     </div>
 
                     {/* <div className="flex gap-8 text-gray-400">
@@ -22,7 +22,7 @@ export default function Footer() {
                     </div> */}
 
                     <div className="text-gray-600">
-                        &copy; 2026 gIA AI. Todos os direitos reservados. | CNPJ 45.522.647/0001-11
+                        &copy; 2026 gIA AI | Todos os direitos reservados | CNPJ 45.522.647/0001-11
                     </div>
                 </div>
             </div>

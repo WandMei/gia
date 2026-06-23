@@ -46,8 +46,8 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg md:text-xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed"
         >
-          Da qualificação de leads à emissão de contratos e 2ª via de boletos.
-          <br />A <span className="text-white font-semibold">gIA</span> assume o trabalho manual para que seus corretores foquem em fechar negócios.
+          Da qualificação de leads à emissão de contratos e 2ª via de boletos
+          <br />A <span className="text-white font-semibold">gIA</span> assume o trabalho manual para que seus corretores foquem em fechar negócios
         </motion.p>
 
         <motion.div

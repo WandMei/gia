@@ -22,17 +22,17 @@ export default function Security() {
                         {
                             icon: ShieldCheck,
                             title: "Criptografia de Ponta",
-                            desc: "Seus dados viajam blindados. Utilizamos protocolos de criptografia militar (AES-256) em todas as transações."
+                            desc: "Seus dados viajam blindados — utilizamos protocolos de criptografia militar (AES-256) em todas as transações"
                         },
                         {
                             icon: Lock,
                             title: "Conformidade LGPD",
-                            desc: "Respeito absoluto à privacidade. Nossa arquitetura foi desenhada desde o dia zero para estar em conformidade com a LGPD."
+                            desc: "Respeito absoluto à privacidade — nossa arquitetura foi desenhada desde o dia zero para estar em conformidade com a LGPD"
                         },
                         {
                             icon: Server,
                             title: "Servidores Isolados",
-                            desc: "Infraestrutura robusta com backups automáticos e redundância geográfica para garantir 99.9% de uptime."
+                            desc: "Infraestrutura robusta com backups automáticos e redundância geográfica para garantir 99.9% de uptime"
                         }
                     ].map((item, index) => (
                         <motion.div
@@ -62,7 +62,7 @@ export default function Security() {
                     className="mt-20 p-8 rounded-2xl bg-gradient-to-r from-[#002233] to-[#00334d] border border-[#00dbff]/20 inline-block shadow-lg shadow-[#00dbff]/5"
                 >
                     <p className="text-lg font-medium text-[#00dbff]">
-                        "Seus dados e os de seus clientes protegidos com a mais alta tecnologia de segurança da informação."
+                        "Seus dados e os de seus clientes protegidos com a mais alta tecnologia de segurança da informação"
                     </p>
                 </motion.div>
             </div>

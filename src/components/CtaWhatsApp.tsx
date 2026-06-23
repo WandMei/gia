@@ -34,7 +34,7 @@ export default function CtaWhatsApp() {
           <p className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
             Fale com nossos especialistas e descubra como a{' '}
             <span className="text-white font-semibold">gIA</span> pode transformar
-            a sua imobiliária — sem fórmula mágica, sem promessas vazias.
+            a sua imobiliária — sem fórmula mágica, sem promessas vazias
           </p>
 
           <motion.a
@@ -51,7 +51,7 @@ export default function CtaWhatsApp() {
           </motion.a>
 
           <p className="mt-5 text-xs text-gray-600">
-            Nenhum compromisso. Apenas uma conversa sem pressão.
+            Nenhum compromisso, apenas uma conversa sem pressão
           </p>
         </motion.div>
       </div>
