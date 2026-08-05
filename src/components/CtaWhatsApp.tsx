@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { MessageCircle, ArrowRight } from 'lucide-react';
 
-const WA_NUMBER = '5514996902210';
+const WA_NUMBER = '5514998552220';
 const WA_MESSAGE = encodeURIComponent(
   'Olá! Estava verificando os recursos da gIA e tenho interesse em saber mais sobre a implementação.'
 );
